@@ -52,5 +52,5 @@ Languages used: HTML, CSS, JavaScript, JQuery, BootStrap, Server-side APIs
 GitHub URL: https://github.com/Mannyalfa/weather-dashboard
 
 
-Deployed webpage URL:
+Deployed webpage URL:https://mannyalfa.github.io/weather-dashboard
 
