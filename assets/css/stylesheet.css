@@ -1,0 +1,25 @@
+/*background*/
+.bg-image {
+    background-image: url("../images/sunset-matanzas-inlet.jpg");
+    height: 100vh;
+
+}
+
+nav{
+    text-align: center;
+}
+
+h1{
+   
+
+
+}
+
+.lead {
+    font-weight: bold;
+}
+
+#credits {
+color: white; 
+
+}

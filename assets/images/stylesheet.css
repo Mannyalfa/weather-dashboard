@@ -1,4 +1,19 @@
 /*background*/
 body {
-    background-image: url("./assets/images/sunset-matanzas-inlet.jpg");
+    background-color: chartreuse;
+}
+
+nav{
+    background-color: chartreuse;
+
+}
+
+h1{
+    text-align: center;
+
+
+}
+
+.lead {
+    font-weight: bold;
 }
