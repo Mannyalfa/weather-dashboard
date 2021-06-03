@@ -14,33 +14,46 @@
     <!-- background image (this will keep the image from 'tiling') -->
 <div class="bg-image">
 <!--header & nav bar-->
-<nav class="nav-bar">
+<header>
     <h1>World-Wide Weather Dashboard</h1>
     <p id="currentDay" class="lead"></p>
 </header>
-<!-- main Content Container --> <main class="container"></main>
+<!-- main Content Container --> 
 <main class="container">
 <!-- city Search Bar -->
     <article>
-        <div>
-            <!-- search Form with Button -->
+        <div class="col-sm-12 col-lg-4 bg-light">
+            <!-- Search Form with Button -->
             <div>
-                <p>Enter a City</p>
+                <p><h3>Search for a City</h3></p>
             </div>
-            <!-- input form and placeholder -->
-            <div>
-                <textarea>(city name here)</textarea>
-                <button>fas fas-search here</button>
+            <div class="input-group mb-3">
+                <input id="city-input" type="text" class="form-control" placeholder="City name"
+                    aria-label="Enter city name">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
-            <!--text area and button-->    
-            <button>Clear Recents</button>
-            <!--recent searches -->
-            <p>Recent Searches</p>
-            <!--need a list here -->
-            <ul>
-            <!--hidden city list to populate -->    
+            <button class="btn md-3" type="button" id="clear-history">Clear Recents</button>
+            <!--Searched City List -->
+            <p><h6>Recent Cities:</h6></p>
+            <!-- added ul for recently searched cities -->
+            <ul class="is-hidden" style='list-style:none' id="historyList">
             </ul>
         </div>
+        <div class="col-sm-12 col-lg-8">
+            <div class="row mr-0">
+                <div class="col-12 m-3 rounded">
+                    <div class="row">
+
+                        <div class="col-sm-12 col-lg-8">
+                            <span id="city-name" class="city-name align-middle"></span>
+                        </div>
+                    </div>
+
+        
     </article>
     <!--main part of selected city -->    
     <article>

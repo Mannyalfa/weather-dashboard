@@ -1,31 +1,82 @@
-/*background*/
-.bg-image {
+body { 
     background-image: url("../images/sunset-matanzas-inlet.jpg");
-    height: 100vh;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
 }
 
-.header-text {
-    font-size:3rem;  
+ header{
     line-height: 1.2;
-    color: #000000;
-   
-  }  
-
-nav{
-    text-align: center;
-}
-
-h1{
-   
-
-
-}
-
+    color: black;
+    text-align: center; 
+}  
 .lead {
     font-weight: bold;
+    line-height: .9;
+}
+
+.col-lg-4 {
+    background-color: transparent;
+} 
+
+/* Search button color */
+
+#search-button {
+    background-color:blue;
+
+
+}
+.btn {
+    color: #fff;
+    background-color: maroon;
+}
+  /* Current Day Schedular ID */
+#currentDay{
+    padding: 0px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0em;    
+}
+ /* for temperature data display body area */
+ .col-12 .box {   
+    background:transparent;
+    border-radius: 12px;
+    width: 760px;
+    margin-top: -2px;
+    margin-left: -10px;
+}
+/* for city searched box  */
+.bg-primary{
+    border-radius: 10px;
+  }
+  /* temperature display box  */
+  .bg-light { 
+    margin-top: 15px;
+    /* margin-left: 10px; */
+    color: transparent (!important);
+    border-radius: 10px;
+    margin-bottom: 17px;  
+  }
+  /* forecast Image size */
+  .imgsize {
+    width: 100px;
+    float: right;
+    margin-right: 50%;
+  }
+  /* searched city button  */
+  li{
+    margin-bottom: 10px;
+    margin-left: -40px;
+  }
+
 }
 
 #credits {
-color: white; 
+color: rgb(231, 183, 62)(!important);
+font-size: smaller; 
 
 }
+
+
+
