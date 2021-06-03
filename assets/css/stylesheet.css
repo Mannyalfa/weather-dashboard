@@ -2,8 +2,14 @@
 .bg-image {
     background-image: url("../images/sunset-matanzas-inlet.jpg");
     height: 100vh;
-
 }
+
+.header-text {
+    font-size:3rem;  
+    line-height: 1.2;
+    color: #000000;
+   
+  }  
 
 nav{
     text-align: center;

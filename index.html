@@ -11,18 +11,58 @@
     <title>Weather Dashboard</title> 
 </head>
 <body>
-    <!-- Background image (this will keep the image from 'tiling') -->
+    <!-- background image (this will keep the image from 'tiling') -->
 <div class="bg-image">
 <!--header & nav bar-->
 <nav class="nav-bar">
-   <h1>World-Wide Weather</h1>
+    <h1>World-Wide Weather Dashboard</h1>
     <p id="currentDay" class="lead"></p>
-
-
 </header>
-<!--container-->
+<!-- main Content Container --> <main class="container"></main>
 <main class="container">
-
+<!-- city Search Bar -->
+    <article>
+        <div>
+            <!-- search Form with Button -->
+            <div>
+                <p>Enter a City</p>
+            </div>
+            <!-- input form and placeholder -->
+            <div>
+                <textarea>(city name here)</textarea>
+                <button>fas fas-search here</button>
+            </div>
+            <!--text area and button-->    
+            <button>Clear Recents</button>
+            <!--recent searches -->
+            <p>Recent Searches</p>
+            <!--need a list here -->
+            <ul>
+            <!--hidden city list to populate -->    
+            </ul>
+        </div>
+    </article>
+    <!--main part of selected city -->    
+    <article>
+        <div>City Name</div>
+        <!-- city weather data placeholders -->
+        <div>Temp</div>
+        <div>Wind</div>
+        <div>Humidity</div>
+        <div>UV Index</div>
+    </article>
+        <!--5 day forecast-->
+    <article>
+        <div>
+            <h2>5-Day Forecast</h2>
+        </div>
+            <!--cards for each forecst day (javaScript)-->
+        <div>day 1</div>
+        <div>day 2</div>
+        <div>day 3</div>
+        <div>day 4</div>
+        <div>day 5</div>
+    </article>
 </main>
 <!--picture credits-->
 <footer>
