@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link  href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/css/stylesheet.css"/>
 
     <title>Weather Dashboard</title> 
@@ -13,13 +14,13 @@
 <body>
     <!-- background image (this will keep the image from 'tiling') -->
 <div class="bg-image">
-<!--header & nav bar-->
-<header>
+<!--nav bar-->
+<nav class="nav-bar">
     <h1>World-Wide Weather Dashboard</h1>
     <p id="currentDay" class="lead"></p>
-</header>
+</nav>
 <!-- main Content Container --> 
-<main class="container">
+<main class="container" style="max-width: 90%;">
 <!-- city Search Bar -->
     <article>
         <div class="col-sm-12 col-lg-4 bg-light">
@@ -28,7 +29,7 @@
                 <p><h3>Search for a City</h3></p>
             </div>
             <div class="input-group mb-3">
-                <input id="city-input" type="text" class="form-control" placeholder="City name"
+                <input id="city-input" type="text" class="form-control" placeholder="City Name"
                     aria-label="Enter city name">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button" id="search-button">
@@ -39,7 +40,7 @@
             <button class="btn md-3" type="button" id="clear-history">Clear Recents</button>
             <!--Searched City List -->
             <p><h6>Recent Cities:</h6></p>
-            <!-- added ul for recently searched cities -->
+            <!-- added ul for recent  cities -->
             <ul class="is-hidden" style='list-style:none' id="historyList">
             </ul>
         </div>
@@ -52,37 +53,34 @@
                             <span id="city-name" class="city-name align-middle"></span>
                         </div>
                     </div>
-
-        
-    </article>
-    <!--main part of selected city -->    
-    <article>
-        <div>City Name</div>
-        <!-- city weather data placeholders -->
-        <div>Temp</div>
-        <div>Wind</div>
-        <div>Humidity</div>
-        <div>UV Index</div>
-    </article>
-        <!--5 day forecast-->
-    <article>
-        <div>
-            <h2>5-Day Forecast</h2>
+                        <div class="row">
+                            <!-- Weather Information-->
+                            <div class="col-12 box">
+                                <div id="cityList">
+                                    <h3>City Name:</h3>
+                                </div>
+                                <div class="col-md-4">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 list">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <!-- 5 Day Weather Forecast -->
+                <div class="row" id="days">
+                </div>
+            </div>
         </div>
-            <!--cards for each forecst day (javaScript)-->
-        <div>day 1</div>
-        <div>day 2</div>
-        <div>day 3</div>
-        <div>day 4</div>
-        <div>day 5</div>
-    </article>
-</main>
-<!--picture credits-->
-<footer>
-    <p id="credits">Photograph: "Sunset over Matanzas Inlet" by Manny Alfaro</p>
-</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    </div>
+<footer>Photograph: "Sunset over Matanzas Inlet" by Manny Alfaro"</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </div>
 </body>
