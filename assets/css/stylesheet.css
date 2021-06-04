@@ -17,16 +17,22 @@ body {
   text-align: center;
 }
 /* Search button color */
+#search-button {
+  color: #fff;
+  background-color: blue;
+}
+
 .btn {
   color: #fff;
   background-color: darkred;
 }
+
 /* Current Day Schedular ID */
 #currentDay{
     padding: 0px;
     font-size: 20px;
     font-weight: 700;
-    color: white;
+    color: transparent;
     text-align: center;
     margin: 0em;    
   }
@@ -47,16 +53,17 @@ body {
     padding: 12px;
   }
   /* temperature */
-   .col-12 .box {   
-    background:lightgray;
+  .col-8 .box { 
+    font-weight: bolder; 
+    background-color: white; 
+    font-size: large;
     border-radius: 12px;
     width: 760px;
     margin-top: -2px;
     margin-left: -10px;
 }
-/* temperature font */
 
-/* for recents box  */
+/* recents box  */
 .bg-primary{
   border-radius: 10px;
 }
