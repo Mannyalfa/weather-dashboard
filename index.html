@@ -12,50 +12,49 @@
     <title>Weather Dashboard</title> 
 </head>
 <body>
-    <!-- background image (this will keep the image from 'tiling') -->
 <div class="bg-image">
 <!--nav bar-->
 <nav class="nav-bar">
     <h1>World-Wide Weather Dashboard</h1>
-    <p id="currentDay" class="lead"></p>
+    <p id="currentDay">
 </nav>
-<!-- main Content Container --> 
-<main class="container" style="max-width: 90%;">
-<!-- city Search Bar -->
-    <article>
-        <div class="col-sm-4 col-lg-4 bg-light">
-            <!-- Search Form with Button -->
-            <div>
-                <p><h3>Search for a City</h3></p>
-            </div>
-            <div class="input-group mb-3">
-                <input id="city-input" type="text" class="form-control" placeholder="City Name"
-                    aria-label="Enter city name">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="search-button">
-                        <i class="fas fa-search"></i>
-                    </button>
+    <!-- Main Content Container -->
+    <div class="container" style="max-width: 90%;">
+        <!-- Main Content Row -->
+        <div class="row">
+            <!-- City Search Bar -->
+            <div class="col-sm-12 col-lg-4 input">
+                <!-- Search Form with Button -->
+                <div>
+                    <p><h3>Search for a City</h3></p>
                 </div>
-            </div>
-            <button class="btn md-3" type="button" id="clear-history">Clear Recents</button>
-            <!--Searched City List -->
-            <p><h6>Recent Cities:</h6></p>
-            <!-- added ul for recent  cities -->
-            <ul class="is-hidden" style='list-style:none' id="historyList">
-            </ul>
-        </div>
-        <div class="col-sm-8 col-lg-8">
-            <div class="row mr-0">
-                <div class="col-8 m-3 rounded">
-                    <div class="row">
-
-                        <div class="col-sm-8 col-lg-8">
-                            <span id="city-name" class="city-name align-middle"></span>
-                        </div>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter City Name"
+                        aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
+                </div>
+                <button class="btn md-3" type="button" id="clear-history">Clear Search History</button>
+                <!--Searched City List -->
+                <p><h6>Search History:</h6></p>
+                <ul class="is-hidden" style='list-style:none' id="historyList">
+                </ul>
+            </div>
+            <div class="col-sm-12 col-lg-8">
+                <div class="row mr-0">
+                    <div class="col-12 m-3 rounded">
                         <div class="row">
-                            <!-- Weather Information-->
-                            <div class="col-8 box">
+
+                            <div class="col-sm-12 col-lg-8">
+                                <span id="city-name" class="city-name align-middle"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Weather Information Column -->
+                            <div class="col-12 box">
                                 <div id="cityList">
                                     <h3>City Name:</h3>
                                 </div>
@@ -63,25 +62,24 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- </div> -->
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 list">
+                    <div class="col-10 list">
                         <h3>5-Day Forecast</h3>
                     </div>
                 </div>
-                <!-- 5 Day Weather Forecast -->
+                <!-- 5 Days Weather Forcast list here -->
                 <div class="row" id="days">
                 </div>
             </div>
         </div>
     </div>
-<footer>Photograph: "Sunset over Matanzas Inlet" by Manny Alfaro"</footer>
-
+    <br>
+<footer class="credits">Photograph: "Sunset over Matanzas Inlet" by Manny Alfaro"</footer>
+</main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-</div>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
