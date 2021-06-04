@@ -3,11 +3,7 @@
     checkLocalStorage();
 });
 //API key for ALL weather data
-var APIKey = ;
-Key	Name	
-3ac5c0cfe3f471f9cd5030b2f1beaa21
-Default	 
-24e07bc5bd24c4619da6c78dabd0b810
+var APIKey = "24e07bc5bd24c4619da6c78dabd0b810"
 var q = "";
 var now = moment();
 var currentDate = now.format('dddd MMMM Do h:mm a');
@@ -25,7 +21,7 @@ $("#search-button").on("click", function (event) {
 
     saveToLocalStorage(q);
 }); 
-// Function to create Button for searched city 
+// Button for searched city  
 function createRecentSearchBtn(q) {
     var newLi = $("<li>")
     var newBtn = $('<button>');
@@ -42,11 +38,42 @@ function createRecentSearchBtn(q) {
     });
 //get weather details change to "q"
 
-api.openweathermap.org/data/2.5/weather?id={city id}&appid={API key}
+//Function to get weather details 
+function getWeather(q) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + q + "&units=imperial&appid=" + APIKey;
+    $.ajax({
+        // gets the current weather info
+        url: queryURL,
+        method: "GET",
+        error: (err => { //If API through error then alert 
+            alert("City not found:Please try again.")
+            return;
+        })
 
+    }).then(function (response) {
+        console.log(response)
+        //to avoid repeating city information on button click 
+        $(".cityList").empty()
+        $("#days").empty()
+        var celsius = convertToC(response.main.temp);
+        var cityMain1 = $("<div col-12>").append($("<p><h2>" + response.name + ' (' + currentDate + ')' + "</h2><p>"));
+        var image = $('<img class="imgsize">').attr('src', 'http://openweathermap.org/img/w/' + response.weather[0].icon + '.png');        
+        var degreeMain = $('<p>').text('Temperature : ' + response.main.temp + ' °F (' + celsius + '°C)');
+        var humidityMain = $('<p>').text('Humidity : ' + response.main.humidity + '%');
+        var windMain = $('<p>').text('Wind Speed : ' + response.wind.speed + 'MPH');       
+        var uvIndexcoord = '&lat=' + response.coord.lat + '&lon=' + response.coord.lon;
+        var cityId = response.id;
 
-api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
+        displayUVindex(uvIndexcoord);
+        displayForecast(cityId);
 
+        cityMain1.append(image).append(degreeMain).append(humidityMain).append(windMain);
+        $('#cityList').empty();
+        $('#cityList').append(cityMain1);
+    });
+}
+
+    
 
 /*DATA STORAGE
 // get data from Local Storage 
