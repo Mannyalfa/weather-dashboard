@@ -1,9 +1,13 @@
-$(document).ready(function () {
+(document).ready(function () {
 	currentLocation();
     checkLocalStorage();
 });
 //API key for ALL weather data
-var APIKey = "4f000a96c8mshf5291b7569fb189p17bea2jsn9e694263a6a9";
+var APIKey = ;
+Key	Name	
+3ac5c0cfe3f471f9cd5030b2f1beaa21
+Default	 
+24e07bc5bd24c4619da6c78dabd0b810
 var q = "";
 var now = moment();
 var currentDate = now.format('dddd MMMM Do h:mm a');
@@ -36,59 +40,15 @@ function createRecentSearchBtn(q) {
         var newQ = $(this).text();
         getWeather(newQ);
     });
-//get weather details 
+//get weather details change to "q"
 
-// search weather data w/my API fix in-process
-	function getWeather(q) {
-	var query = "https://community-open-weather-map.p.rapidapi.com/find?q=" + q + "&units=imperial%2C%20metric" +APIKey;
-	"method": "GET",
-	
-
-	}
-};
-//get current weather w/my API-Fix this!!
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=%22metric%22%20or%20%22imperial%22&mode=xml%2C%20html",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "4f000a96c8mshf5291b7569fb189p17bea2jsn9e694263a6a9",
-		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-	}
-};
-
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
+api.openweathermap.org/data/2.5/weather?id={city id}&appid={API key}
 
 
-//get 5 day forecast w/my API-Fix this!
-
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://community-open-weather-map.p.rapidapi.com/forecast?q=san%20francisco%2Cus",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "4f000a96c8mshf5291b7569fb189p17bea2jsn9e694263a6a9",
-		"x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-	}
-};
-
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
-
-
-
-
-
-
+api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
 
 
 /*DATA STORAGE
-
 // get data from Local Storage 
 function checkLocalStorage() {
     var storedData = localStorage.getItem('queries');
@@ -108,7 +68,6 @@ function saveToLocalStorage(q) {
     var data = localStorage.getItem('queries');
     if (data) {
         console.log(data, q)
-
     } else {
         data = q;
         localStorage.setItem('queries', data);
@@ -123,26 +82,6 @@ function saveToLocalStorage(q) {
 $("#clear-history").on("click", function (event) {
     $("#historyList").empty();
 });*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
