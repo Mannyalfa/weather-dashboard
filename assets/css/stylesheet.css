@@ -5,7 +5,7 @@ body {
 	background-attachment: fixed;
 }
 
-* Header text */ .header-text {
+.header-text {
 	font-size: 3rem;
 	line-height: 1.2;
 	color: #000000;
@@ -13,27 +13,26 @@ body {
 /* navbar styles */
 .nav-bar {
 	text-align: center;
- 
 }
 /* Search button color */
 #search-button {
 	color: #fff;
-	background-color: blue;
+	background-color: brown;
 }
 
 .btn {
 	color: #fff;
-	background-color: darkred;
-  width: 100%;
+	background-color: black;
+	width: 100%;
 }
 
 #extraBtn {
-  width: 100%;
+	width: 100%;
 }
 
-h6{
-  text-align: center;
-  font-weight: bolder;
+h6 {
+	text-align: center;
+	font-weight: bolder;
 }
 
 /* Current Day Schedular ID */
@@ -47,19 +46,19 @@ h6{
 }
 
 #cityList {
-  font-size: 20px;
-  font-weight: bolder;
+	font-size: 20px;
+	font-weight: bolder;
 }
 
 /* footer */
-.credits{
-  height: 7%;
+.credits {
+	height: 7%;
 	text-align: center;
-    color: wheat;
+	color: wheat;
 	display: block;
 	position: fixed;
-  margin-top: 20px;
-  padding: 20px;
+	margin-top: 20px;
+	padding: 20px;
 	width: 100%;
 }
 
@@ -85,7 +84,7 @@ h6{
 }
 /* forecast Image size */
 .imgsize {
-	width: 100px;
+	width: 150px;
 	float: right;
 	margin-right: 50%;
 }

@@ -7,7 +7,7 @@ var APIKey = "24e07bc5bd24c4619da6c78dabd0b810";
 var q = "";
 var now = moment();
 //Date and time formate for header
-var currentDate = now.format("MMMM Do YYYY : h:mm a");
+var currentDate = now.format(" dddd MMMM Do");
 $("#currentDay").text(currentDate);
 
 //Setting the click function at ID search button
@@ -131,7 +131,7 @@ function displayForecast(c) {
 
 				var celsius = convertToC(arrayList[i].main.temp); //converting F to Celsius
 				var cityMain = $("<div>");
-				cityMain.addClass("col forecast bg-white text-gray ml-3 mb-3 rounded>");
+				cityMain.addClass("col forecast bg-white text-black ml-3 mb-3 rounded");
 				var date5 = $("<h5>").text(moment(response.list[i].dt_txt).format("dddd"));
 				var image = $("<img>").attr(
 					"src",
