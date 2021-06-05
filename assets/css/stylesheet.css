@@ -21,7 +21,6 @@ body {
 	font-size: small;
 	margin-bottom: none;
 	padding-bottom: 0%;
-
 }
 /* Search button color */
 #search-button {
@@ -58,11 +57,6 @@ h6 {
 #cityList {
 	font-size: 20px;
 	font-weight: bolder;
-}
-
-<div class= .rounded {
-background-color: beige;
-
 }
 
 /* footer */
@@ -132,6 +126,11 @@ li {
 	}
 	.header-text {
 		font-size: 16px;
+	}
+	.imgsize {
+		width: 100px;
+		float: left;
+		margin-right: 10%;
 	}
 }
 #days {
