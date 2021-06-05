@@ -203,4 +203,5 @@ function saveToLocalStorage(q) {
 //clear search
 $("#clear-history").on("click", function (event) {
 	$("#historyList").empty();
+	localStorage.clear();
 });
