@@ -9,15 +9,25 @@ body {
 	font-size: 3rem;
 	line-height: 1.2;
 	color: #000000;
+	margin-bottom: none;
+	padding-bottom: 0%;
 }
 /* navbar styles */
 .nav-bar {
 	text-align: center;
 }
+
+.intl {
+	font-size: small;
+	margin-bottom: none;
+	padding-bottom: 0%;
+
+}
 /* Search button color */
 #search-button {
 	color: #fff;
 	background-color: brown;
+	margin-top: 0% (!important);
 }
 
 .btn {
@@ -48,6 +58,11 @@ h6 {
 #cityList {
 	font-size: 20px;
 	font-weight: bolder;
+}
+
+<div class= .rounded {
+background-color: beige;
+
 }
 
 /* footer */
